@@ -19,6 +19,12 @@ public class TxTest {
     @Autowired
     private IAccountDao accountDao;
 
+
+    @Test
+    public void testTransfer() {
+        accountService.transfer("aaa","bbb",100f);
+    }
+
     @Test
     public void testJdbcFindAccountById() {
         Account account = accountService.findAccountById(1);
